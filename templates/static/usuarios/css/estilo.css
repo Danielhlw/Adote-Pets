@@ -1,0 +1,102 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background: url("../img/pexels.jpg") no-repeat ;
+    background-size: cover;
+    
+}
+
+header{
+    margin-bottom: 60px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    height: 11vh;
+    background-color: #ece7f0;
+    align-items: center;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.164);
+    
+}
+
+img#img-dog-adote {
+    max-width: 300px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    padding-top: 15px;
+
+}
+
+nav li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #0796ce;
+}
+
+nav a:hover {
+    color: #065e81;
+}
+
+main {
+    padding-top: 30px;
+    max-width: 600px;
+    margin: auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.233);
+
+}
+
+img#logo-adote{
+    display: flex;
+    width: 150px;
+    margin: auto;
+}
+
+main form {
+    max-width: 400px;
+    padding: 50px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+}
+
+form ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+form a {
+    text-decoration: none;
+}
+
+input#boton-login{
+    padding: 2px 7px;
+    border-radius: 10px;
+    background-color: #FF7CA1;
+    font-weight: bold;
+    border: 1px solid rgb(78, 76, 76);
+    color: white;
+}
+
+/* ALERTA DE ERROS*/
+
+#dados-invalidos {
+    color: rgb(245, 80, 58);
+    font-size: 0.8em;
+}

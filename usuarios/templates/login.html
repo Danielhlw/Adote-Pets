@@ -1,0 +1,57 @@
+{% load static %}
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="shortcut icon" href="{% static 'usuarios/img/favicon.ico' %}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'usuarios/css/estilo.css' %}" rel="stylesheet">
+
+    </head>
+<body>
+    <header>
+            <nav>
+                <img src="{% static 'usuarios/img/image.png' %}" width="8%">
+                <ul>
+                    <li><a href="">Login</a></li>
+                    <li><a href="">Cadastre</a></li>
+                    <li><a href="">Sobre</a></li>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <img src="{% static 'usuarios/img/adote_fundo23.png' %}" width="40%">
+        <form action="{% url 'login' %}" method="POST">{% csrf_token %}
+            {% if messages %}
+            <br>
+            {% for message in messages %}
+            <div>
+            <span id="dados-invalidos">*{{message}}</span>
+            </div>
+            {% endfor %}
+            {% endif %}
+            <span>Nome:</span>
+            <input type="text" class="form-control" placeholder="Digite seu nome..." name="nome">
+            <br>
+           
+            <span>Senha:</span>
+            <input type="password" class="form-control" placeholder="Digite sua senha..." name="senha">
+            <br>
+                
+            <ul>
+                <li><input id="boton-login" type="submit" value="LOGIN" class="btn-custom-primary"></li>
+                <li><a href="{% url 'cadastro' %}" class="link-float">Cadastre-se</a></li>
+            </ul>
+            
+        
+            
+        </form>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
